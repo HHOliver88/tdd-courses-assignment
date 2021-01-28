@@ -26,13 +26,11 @@ services:
         - db
         - selenium_chrome
       build: ./
-
-      # Overrides default command so things don't shut down after the process ends.
       command: npm start
       volumes:
-        - ./:/var/www/app 
+        - ./:/var/www/app
       ports:
-        - 3000:3000
+        - 3001:3000
 
 volumes:
     db_data: {}
